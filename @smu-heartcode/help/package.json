@@ -1,0 +1,9 @@
+{
+  "name": "@smu-heartcode/help",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  }
+}

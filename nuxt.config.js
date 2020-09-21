@@ -20,6 +20,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@smu-heartcode/help',
   ],
   axios: {},
 }

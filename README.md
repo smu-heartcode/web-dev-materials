@@ -3,11 +3,10 @@
 
 
 ## What's this, what's that?
-> Ignore the rest, only this 3 are important.
 
 #### `./pages`
 
-#### `./components`
-
 #### `./static`
+
+#### `./components`
 
