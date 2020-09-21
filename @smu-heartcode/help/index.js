@@ -1,7 +1,6 @@
-// import path from 'path'
-// this.addPlugin(path.resolve(__dirname, 'plugin.js'))
+const {join, resolve, relative} = require('path')
 
-export default async function heartcodeHelp(moduleOptions) {
+module.exports = async function (moduleOptions) {
   const pages = [
     {path: 'help/day1', file: 'pages/day1/index.vue'},
     {path: 'help/day2', file: 'pages/day2/index.vue'},
@@ -17,5 +16,28 @@ export default async function heartcodeHelp(moduleOptions) {
         component: resolve(__dirname, file)
       })
     })
+
   }
+
+  const {options, hook} = this.nuxt
+
+  options.css.unshift(resolve(__dirname, 'tailwind.css'))
+
+  hook('build:before', async () => {
+    if (!options.dev && !process.env.NODE_ENV) {
+      process.env.NODE_ENV = 'production'
+    }
+
+    const {postcss} = options.build
+    postcss.preset.stage = 1
+    postcss.plugins = postcss.plugins || {}
+    postcss.plugins.tailwindcss = {
+      prefix: "hch-",
+      corePlugins: {
+        preflight: false,
+      }
+    }
+  })
 }
+
+module.exports.meta = require('./package.json')
