@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h3>Loop Basic?</h3>
+    <h3>Component Basic?</h3>
+
     <h1>Day 2: Javascript & Reactivity</h1>
 
     <h2>Mutating Data</h2>

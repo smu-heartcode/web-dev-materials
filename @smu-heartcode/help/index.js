@@ -31,12 +31,7 @@ module.exports = async function (moduleOptions) {
     const {postcss} = options.build
     postcss.preset.stage = 1
     postcss.plugins = postcss.plugins || {}
-    postcss.plugins.tailwindcss = {
-      prefix: "hch-",
-      corePlugins: {
-        preflight: false,
-      }
-    }
+    postcss.plugins.tailwindcss = resolve(__dirname, 'tailwind.config.js')
   })
 }
 

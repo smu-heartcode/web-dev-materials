@@ -1,32 +1,59 @@
 <template>
-  <div>
-    <h1>Day 1: HTML</h1>
+  <div class="t-m-0">
+    <nav-header/>
 
-    <h2>h1-h6</h2>
-    <h2>p</h2>
+    <div class="t-container t-mx-auto t-px-4 t-py-6">
+      <h1>HTML Basic</h1>
 
-    <h2>div</h2>
-    <h2>ul, li</h2>
+      <div>
+        <h3>h1-h6</h3>
+      </div>
 
-    <h2>pages/</h2>
+      <div>
+        <h3>p</h3>
+      </div>
 
-    <h2>a</h2>
+      <div>
+        <h3>div</h3>
+      </div>
 
-    <h2>images</h2>
+      <div>
+        <h3>ul, li</h3>
+      </div>
 
-    <h1>Day 1: CSS</h1>
-    <h2>css/color</h2>
+      <h1>Navigation</h1>
 
+      <div>
+        <h3>pages/</h3>
+      </div>
 
-    <h2>CSS styling</h2>
+      <div>
+        <h3>a</h3>
+      </div>
 
-    <h2>Loop Basic?</h2>
-    <h2>Component Basic?</h2>
+      <h1>Images</h1>
+      <div>
+        <h3>images</h3>
+      </div>
+
+      <h1 class="t-mt-6">CSS Basic</h1>
+
+      <div>
+        <h3>Colors</h3>
+      </div>
+
+      <div>
+        <h3>Spacing</h3>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import NavHeader from "../../components/nav-header";
+
 export default {
+  components: {NavHeader}
 }
 </script>
 
