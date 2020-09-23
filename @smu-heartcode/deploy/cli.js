@@ -57,7 +57,7 @@ cli
         if (err) {
           console.log(err)
         } else {
-          console.log(chalk.green(`Successfully uploaded`) + ` to https://${username}.heartcode.app`)
+          console.log(chalk.green(`✔  Successfully`) + ` uploaded to https://${username}.heartcode.app`)
         }
       })
     })
