@@ -1,8 +1,8 @@
 export default {
-  mode: 'spa',
+  ssr: false,
   target: 'static',
   head: {
-    title: 'Web Dev Materials',
+    title: 'HeartCode Web Dev',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -20,7 +20,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@smu-heartcode/help',
+    '@smu-heartcode/smu-heartcode-help',
   ],
   axios: {},
 }
