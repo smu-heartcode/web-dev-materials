@@ -1,0 +1,10 @@
+{
+  "name": "@smu-heartcode/smu-heartcode-help",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "tailwindcss": "^1.7.3"
+  }
+}

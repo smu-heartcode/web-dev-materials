@@ -6,12 +6,20 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "nuxt generate -q && smu-heartcode-deploy <%= cli-username %> <%= cli-password %>"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "@smu-heartcode/smu-heartcode-help": "1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@smu-heartcode/smu-heartcode-deploy": "1.0.0"
+  },
+  "workspaces": [
+    "@smu-heartcode/deploy",
+    "@smu-heartcode/help"
+  ]
 }

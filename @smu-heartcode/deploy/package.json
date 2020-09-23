@@ -1,0 +1,12 @@
+{
+  "name": "@smu-heartcode/smu-heartcode-deploy",
+  "version": "1.0.0",
+  "private": true,
+  "bin": "cli.js",
+  "dependencies": {
+    "archiver": "^5.0.2",
+    "axios": "^0.20.0",
+    "cac": "^6.6.1",
+    "chalk": "^4.1.0"
+  }
+}
