@@ -1,8 +1,8 @@
 {
   "name": "@smu-heartcode/smu-heartcode-deploy",
-  "version": "1.0.0",
-  "private": true,
   "bin": "cli.js",
+  "version": "0.1.0",
+  "license": "MIT",
   "dependencies": {
     "archiver": "^5.0.2",
     "axios": "^0.20.0",
