@@ -2,10 +2,10 @@ const {join, resolve, relative} = require('path')
 
 module.exports = async function (moduleOptions) {
   const pages = [
+    {path: 'help', file: 'pages/index.vue'},
     {path: 'help/day1', file: 'pages/day1/index.vue'},
     {path: 'help/day2', file: 'pages/day2/index.vue'},
     {path: 'help/day3', file: 'pages/day3/index.vue'},
-    {path: 'help/day4', file: 'pages/day4/index.vue'},
   ]
 
   this.options.router.extendRoutes = (routes, resolve) => {

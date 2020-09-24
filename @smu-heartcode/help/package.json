@@ -5,6 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^9.0.1",
-    "tailwindcss": "^1.7.3"
+    "prismjs": "^1.21.0",
+    "strip-indent": "^3.0.0",
+    "tailwindcss": "^1.7.3",
+    "vue-prism-editor": "^1.2.2"
   }
 }

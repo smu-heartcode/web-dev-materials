@@ -1,4 +1,8 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   prefix: "t-",
   corePlugins: {
     preflight: true,
