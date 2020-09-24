@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate -q && smu-heartcode-deploy <%= cli-username %> <%= cli-password %>"
+    "deploy": "nuxt generate -q && smu-heartcode-deploy <%= username %> <%= password %>"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
