@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>Hey World!</h1>
+    <h3>Hey World! I am a component.</h3>
   </div>
 </template>
