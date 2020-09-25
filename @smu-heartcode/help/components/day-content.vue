@@ -18,8 +18,8 @@
 <script>
 import HelpContainer from "./help-container";
 import CodeSplitHtml from "./code-split-html";
+import CodeSplitVue from "./code-split-vue";
 import contents from '../contents'
-import CodeSplitVue from "@/@smu-heartcode/help/components/code-split-vue";
 
 export default {
   name: 'day-content',
