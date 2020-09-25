@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate -q && smu-heartcode-deploy root smu-heartcode-2020-workshop"
+    "deploy": "nuxt generate -q && smu-heartcode-deploy <%= username %> <%= password %>"
   },
   "files": [
     "static/**",
@@ -20,10 +20,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
     "nuxt": "^2.14.0",
-    "@smu-heartcode/smu-heartcode-help": "0.1.0"
+    "@smu-heartcode/smu-heartcode-help": "0.2.0"
   },
   "devDependencies": {
-    "@smu-heartcode/smu-heartcode-deploy": "0.1.0"
+    "@smu-heartcode/smu-heartcode-deploy": "0.2.0"
   },
   "workspaces": [
     "@smu-heartcode/deploy",
