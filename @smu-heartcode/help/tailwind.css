@@ -69,3 +69,16 @@ hr:after {
   letter-spacing: 8px;
   color: #e53e3e;
 }
+
+button {
+  @apply bg-gray-300;
+  @apply py-2;
+  @apply px-3;
+  @apply border;
+  @apply rounded;
+  @apply font-bold;
+}
+
+button:hover {
+  @apply border-gray-400;
+}

@@ -19,7 +19,6 @@ export default {
   components: true,
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
     '@smu-heartcode/smu-heartcode-help',
   ],
   axios: {},

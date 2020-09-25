@@ -1,5 +1,5 @@
 <template>
-  <day-content day="day2"/>
+  <day-content day="day3"/>
 </template>
 
 <script>

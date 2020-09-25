@@ -5,6 +5,7 @@
 <script>
 import DayContent from "../../components/day-content";
 
+
 export default {
   components: {
     DayContent,

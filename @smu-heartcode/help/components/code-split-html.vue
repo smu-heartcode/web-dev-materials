@@ -3,7 +3,9 @@
     <div class="t-flex t-items-center">
       <h2>{{ title }}</h2>
       <div class="t-ml-4 t-flex">
-        <div class="t-font-mono t-text-center t-text-gray-800 t-text-sm t-font-semibold t-mr-2 t-px-2 t-rounded t-py-1 t-bg-gray-300 t-leading-tight" v-for="tag in tags">
+        <div
+          class="t-font-mono t-text-center t-text-gray-800 t-text-sm t-font-semibold t-mr-2 t-px-2 t-rounded t-py-1 t-bg-gray-300 t-leading-tight"
+          v-for="tag in tags">
           {{ tag }}
         </div>
       </div>
@@ -14,8 +16,8 @@
         <prism-editor class="code-editor" v-model="liveCode" :highlight="highlighter" line-numbers/>
       </div>
 
-      <div class="t-w-1/2 t-py-3 t-px-6">
-        <div v-html="liveCode"/>
+      <div class="t-w-1/2 t-p-5">
+        <div v-html="html"/>
       </div>
     </div>
   </div>
@@ -30,6 +32,8 @@ import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-markup";
 import "prismjs/themes/prism-tomorrow.css";
+
+import stripIndent from "strip-indent";
 
 export default {
   name: "code-split-html",
@@ -50,7 +54,12 @@ export default {
   },
   data() {
     return {
-      liveCode: this.code.trim()
+      liveCode: stripIndent(this.code).trim()
+    }
+  },
+  computed: {
+    html() {
+      return this.liveCode.replace(/<\/?template>/, '')
     }
   },
   methods: {

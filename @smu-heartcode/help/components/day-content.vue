@@ -6,7 +6,10 @@
       <div>
         <h1 class="t-border-b t-pb-2 t-mb-8">{{ section.topic }}</h1>
 
-        <code-split-html class="t-mb-10" v-for="item in section.list" v-bind="item" :key="item.title"/>
+        <div class="t-mb-12" v-for="item in section.list" :key="item.title">
+          <code-split-vue v-if="item.vue" v-bind="item"/>
+          <code-split-html v-else v-bind="item"/>
+        </div>
       </div>
     </template>
   </help-container>
@@ -16,6 +19,7 @@
 import HelpContainer from "./help-container";
 import CodeSplitHtml from "./code-split-html";
 import contents from '../contents'
+import CodeSplitVue from "@/@smu-heartcode/help/components/code-split-vue";
 
 export default {
   name: 'day-content',
@@ -28,6 +32,7 @@ export default {
     }
   },
   components: {
+    CodeSplitVue,
     CodeSplitHtml,
     HelpContainer,
   }
