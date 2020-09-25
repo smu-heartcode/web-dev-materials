@@ -7,11 +7,18 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate -q && smu-heartcode-deploy <%= username %> <%= password %>"
+    "deploy": "nuxt generate -q && smu-heartcode-deploy root smu-heartcode-2020-workshop"
   },
+  "files": [
+    "static/**",
+    "pages/**",
+    "components/**",
+    ".editorconfig",
+    "nuxt.config.js",
+    "jsconfig.json"
+  ],
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
-    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "nuxt": "^2.14.0",
     "@smu-heartcode/smu-heartcode-help": "0.1.0"
   },

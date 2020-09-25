@@ -1,11 +1,11 @@
-const {join, resolve, relative} = require('path')
+const {path, join, resolve, relative} = require('path')
 
 module.exports = async function (moduleOptions) {
   const pages = [
+    {path: 'help', file: 'pages/index.vue'},
     {path: 'help/day1', file: 'pages/day1/index.vue'},
     {path: 'help/day2', file: 'pages/day2/index.vue'},
     {path: 'help/day3', file: 'pages/day3/index.vue'},
-    {path: 'help/day4', file: 'pages/day4/index.vue'},
   ]
 
   this.options.router.extendRoutes = (routes, resolve) => {
@@ -16,12 +16,12 @@ module.exports = async function (moduleOptions) {
         component: resolve(__dirname, file)
       })
     })
-
   }
 
   const {options, hook} = this.nuxt
 
   options.css.unshift(resolve(__dirname, 'tailwind.css'))
+  options.css.unshift(resolve(__dirname, 'vuep.css'))
 
   hook('build:before', async () => {
     if (!options.dev && !process.env.NODE_ENV) {
@@ -32,6 +32,11 @@ module.exports = async function (moduleOptions) {
     postcss.preset.stage = 1
     postcss.plugins = postcss.plugins || {}
     postcss.plugins.tailwindcss = resolve(__dirname, 'tailwind.config.js')
+  })
+
+  // Add vuep plugin
+  this.extendBuild((config) => {
+    config.resolve.alias['vue$'] = 'vue/dist/vue.common'
   })
 }
 
