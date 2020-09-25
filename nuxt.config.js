@@ -1,4 +1,5 @@
 export default {
+  telemetry: false,
   ssr: false,
   target: 'static',
   head: {
