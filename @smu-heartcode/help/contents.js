@@ -1,3 +1,4 @@
+// noinspection HtmlRequiredAltAttribute,HtmlUnknownTarget
 module.exports = {
   'day1': {
     sections: [
@@ -379,9 +380,7 @@ module.exports = {
           {
             vue: true,
             title: "Game Card",
-            tags: [
-
-            ],
+            tags: [],
             code: `
               <template>
                 <div>
@@ -441,37 +440,501 @@ module.exports = {
   'day2': {
     sections: [
       {
-        topic: 'Javascript & HTML',
+        topic: 'Components',
         list: [
           {
             vue: true,
-            title: "Components",
-            tags: ["<name>"],
-            code: ``
-          },
-          {
-            vue: true,
-            title: "Looping",
-            tags: ["v-for"],
+            title: "Creating components",
+            tags: [
+              "/components/custom.vue",
+              "<custom>",
+            ],
             code: `
+              <!--
+              components/
+              ├── custom.vue
+              -->
+              <template>
+                <div>
+                  <h1>Custom Component</h1>
+                  <p>Custom Content</p>
+                </div>
+              </template>
 
+              <!--
+              You can use <custom></custom> anywhere now.
+              -->
             `
           },
         ],
       },
       {
-        topic: 'Javascript & Reactivity',
+        topic: 'Javascript',
         list: [
-          {title: "Button", tags: ["button"], code: ``},
-          {title: "Mutating", tags: ["{{value}}"], code: ``},
-          {title: "Conditional", tags: ["v-if"], code: ``},
-          {title: "Interval", tags: ["button"], code: ``},
-          {title: "Random", tags: ["Random"], code: ``},
+          {
+            vue: true,
+            title: "Basic Structure",
+            tags: [
+              "<script>",
+              "return { }",
+              "{{name}}",
+            ],
+            code: `
+              <template>
+                <div>
+                  {{name}}
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { name: "Hello" }
+                }
+              }
+              </script>
+            `
+          },
+          {
+            vue: true,
+            title: "Math Operation",
+            tags: [
+              "+",
+              "-",
+              "/",
+              "*",
+              "%",
+            ],
+            code: `
+              <template>
+                <div>
+                  <h3>{{count + 10}}</h3>
+                  <h3>{{count - 20}}</h3>
+                  <h3>{{count / 5}}</h3>
+                  <h3>{{count * 5}}</h3>
+                  <br><br>
+                  <h3>{{count % 14}}</h3>
+                  <h3>{{count % 5}}</h3>
+                  <h3>{{count % 6}}</h3>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { count: 15 }
+                }
+              }
+              </script>
+            `
+          },
+          {
+            vue: true,
+            title: "Text Operation",
+            tags: [
+              "===",
+              "+",
+            ],
+            code: `
+              <template>
+                <div>
+                  <div>
+                    <h3>{{text}} 2020</h3>
+                    <h3>{{text + " 2020"}}</h3>
+                    <h3>{{text + " " + year}}</h3>
+                    <h3>{{text}} {{year}}</h3>
+                  </div>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { text: "HeartCode", year: 2020 }
+                }
+              }
+              </script>
+            `
+          },
+          {
+            vue: true,
+            title: "True/False Operation",
+            tags: [
+              "===",
+              "!==",
+            ],
+            code: `
+              <template>
+                <div>
+                  <div>
+                    <h3>{{text === "HeartCode"}}</h3>
+                    <h3>{{text === "Not HeartCode"}}</h3>
+                    <h3>{{text !== "Not HeartCode"}}</h3>
+                  </div>
+                  <br>
+                  <div>
+                    <h3>{{year === 2020}}</h3>
+                    <h3>{{year !== 2020}}</h3>
+                  </div>
+                  <br>
+                  <ul>
+                    <li>{{10 > 5}}</li>
+                    <li>{{10 >= 10}}</li>
+                    <li>{{10 < 5}}</li>
+                    <li>{{10 <= 10}}</li>
+                  </li>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { text: "HeartCode", year: 2020}
+                }
+              }
+              </script>
+            `
+          },
+          {
+            vue: true,
+            title: "Complex Operation",
+            tags: [
+              "+",
+              "()",
+            ],
+            code: `
+              <template>
+                <div>
+                  <h3>{{ text + year === "HeartCode2020" }}</h3>
+                  <br>
+                  <h3>{{ year * (year + 10) - (5 * 100) }}</h3>
+                  <br>
+                  <h3>10 even: {{ 10 % 2 === 0 }}</h3>
+                  <h3>10 odd: {{ 10 % 2 !== 0 }}</h3>
+                  <h3>15 multiples of 5: {{ 15 % 5 === 0 }}</h3>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return {
+                    text: "HeartCode",
+                    year: 2020,
+                  }
+                }
+              }
+              </script>
+            `
+          },
+        ]
+      },
+      {
+        topic: 'Reactivity: Input & Button',
+        list: [
+          {
+            vue: true,
+            title: "Button",
+            tags: [
+              "<button>",
+              '@click=',
+            ],
+            code: `
+              <template>
+                <div>
+                  <h1>{{count}}</h1>
+
+                  <button @click="count = count + 1">
+                  +1
+                  </button>
+
+                  <button @click="count = count + 5">
+                  +5
+                  </button>
+
+                  <button @click="count = count + 10">
+                  +10
+                  </button>
+
+                  <button @click="count = count - 2">
+                  -2
+                  </button>
+
+                  <button @click="count = 0">
+                  RESET
+                  </button>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { count: 0 }
+                }
+              }
+              </script>
+            `
+          },
+          {
+            vue: true,
+            title: "Text Input",
+            tags: ["input"],
+            code: `
+              <template>
+                <div>
+                  <input v-model="text">
+                  <br><br>
+                  <h3>{{text}}</h3>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { text: "Edit me" }
+                }
+              }
+              </script>
+            `
+          },
+        ]
+      },
+      {
+        topic: 'Reactivity: Logic',
+        list: [
+          {
+            vue: true,
+            title: "Conditional",
+            tags: [
+              'v-if="true"',
+              'v-if="false"',
+            ],
+            code: `
+              <template>
+                <div>
+                  <h4 v-if="count % 2 === 0">
+                  I am even
+                  </h4>
+                  <h4 v-if="count % 2 !== 0">
+                  I am Odd
+                  </h4>
+
+                  <div class="padding-top-10">
+                    <input v-model="count">
+                  </div>
+
+                  <div class="padding-top-10">
+                    <button @click="count = count + 1">
+                    Add One
+                    </button>
+                  </div>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { count: 0 }
+                }
+              }
+              </script>
+
+              <style>
+              .padding-top-10 {
+                padding-top: 10px;
+              }
+              </style>
+            `
+          },
+          {
+            vue: true,
+            title: "Looping",
+            tags: [
+              'v-for="_ in _"',
+              'v-if="true/false"',
+            ],
+            code: `
+              <template>
+                <div>
+                  <div v-for="item in list">
+                    <h1>I am {{item}}</h1>
+                    <p class="even" v-if="item % 2 === 0">
+                    I am even.
+                    </p>
+                    <p class="odd" v-if="item % 2 !== 0">
+                    I am odd.
+                    </p>
+                  </div>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { list: [1,2,3,4,5] }
+                }
+              }
+              </script>
+
+              <style>
+              .odd {
+                background: lightpink;
+                padding: 8px;
+              }
+              .even {
+                background: lightskyblue;
+                padding: 8px;
+              }
+              </style>
+            `
+          },
+          {
+            vue: true,
+            title: "Random",
+            tags: ["Math.random()", "Math.round()"],
+            code: `
+              <template>
+                <div>
+                  <h4>{{count * 10}}</h4>
+                  <h4>{{count * 100}}</h4>
+                  <h4>{{count * 1000}}</h4>
+                  <h4>{{count * 50}}</h4>
+
+                  <h4>{{Math.round(count * 300)}}</h4>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return { count: Math.random() }
+                }
+              }
+              </script>
+            `
+          },
+          {
+            vue: true,
+            title: "Interval",
+            tags: [
+              "setInterval(() => {}, 1000)",
+              "if(true/false)",
+              "if(this.count % 2 === 0)",
+            ],
+            code: `
+              <template>
+                <div>
+                  <h1>{{count}} + {{rand}}</h1>
+                  <h1> = </h1>
+                  <h1>{{count + rand}}</h1>
+                  <br>
+                  <h3>Is it even? {{even}}</h3>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return {
+                    rand: 0, count: 0, even: true
+                  }
+                },
+                mounted() {
+                  setInterval(() => {
+                    this.count = this.count + 1
+                    this.rand = Math.round(Math.random() * 20)
+
+                    if ((this.rand + this.count) % 2 === 0) {
+                      this.even = true
+                    } else {
+                      this.even = false
+                    }
+                  }, 1000)
+                },
+              }
+              </script>
+            `
+          },
         ],
       },
       {
-        topic: 'Example: Homework Tracker',
-        list: [],
+        topic: 'Combining Them Together',
+        list: [
+          {
+            vue: true,
+            title: "Math Game",
+            tags: [
+              "setInterval()",
+              "Math.random",
+            ],
+            code: `
+              <template>
+                <div>
+                  <div class="keyboard">
+                    <h1>{{rand1}} + {{rand2}}</h1>
+                    <h1> = </h1>
+
+                    <input class="input" v-model="answer">
+                  </div>
+                  <br>
+                  <div class="score" v-if="round > 0">
+                    <h3>Score: {{score}}</h3>
+                    <h3>Rounds: {{round}}</h3>
+                  </div>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return {
+                    round: 0,
+                    score: 0,
+                    answer: "",
+                    rand1: 0,
+                    rand2: 0
+                  }
+                },
+                mounted() {
+                  setInterval(() => {
+                    if (this.rand1 + this.rand2 === Number.parseInt(this.answer)) {
+                      this.score = this.score + 1
+                    }
+
+                    this.answer = ""
+
+                    this.rand1 = Math.round(Math.random() * 100)
+                    this.rand2 = Math.round(Math.random() * 100)
+
+                    this.round = this.round + 1
+                  }, 4000)
+                },
+              }
+              </script>
+
+              <style>
+              .keyboard {
+                padding: 16px;
+                background: black;
+                color: white;
+                border-radius: 3px;
+              }
+
+              .input {
+                color: black;
+                background: white;
+              }
+
+              .score {
+                padding: 16px;
+                background: black;
+                color: white;
+                border-radius: 3px;
+              }
+              </style>
+            `
+          },
+        ],
       },
     ],
   },
@@ -480,9 +943,9 @@ module.exports = {
       {
         topic: 'Library',
         list: [
-          {title: "Getting data", tags: ["get"], code: ``},
-          {title: "Updating data", tags: ["put"], code: ``},
-          {title: "Deleting data", tags: ["delete"], code: ``},
+          {vue: true, title: "Getting data", tags: ["get"], code: ``},
+          {vue: true, title: "Updating data", tags: ["put"], code: ``},
+          {vue: true, title: "Deleting data", tags: ["delete"], code: ``},
         ],
       },
       {

@@ -82,3 +82,14 @@ button {
 button:hover {
   @apply border-gray-400;
 }
+
+input {
+  @apply bg-gray-200;
+  @apply py-2;
+  @apply px-3;
+  @apply border;
+  @apply rounded;
+  @apply text-lg;
+  @apply border-gray-200;
+  @apply w-full;
+}
