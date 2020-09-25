@@ -351,6 +351,8 @@ module.exports = {
             tags: [
               "text-align:",
               "height:",
+              "font-size:",
+              "font-weight:",
             ],
             code: `
               <template>
@@ -358,6 +360,10 @@ module.exports = {
                   <h1 class="text-right">Right</h1>
 
                   <h3 class="text-center">Center</h3>
+
+                  <div class="text-big">
+                    Text Big Big Big Big
+                  </div>
                 </div>
               </template>
 
@@ -368,6 +374,11 @@ module.exports = {
 
               .text-center {
                 text-align: center;
+              }
+
+              .text-big {
+                font-size: 48px;
+                font-weight: 700;
               }
               </style>
             `
@@ -941,11 +952,170 @@ module.exports = {
   'day3': {
     sections: [
       {
-        topic: 'Library',
+        topic: 'Methods',
         list: [
-          {vue: true, title: "Getting data", tags: ["get"], code: ``},
-          {vue: true, title: "Updating data", tags: ["put"], code: ``},
-          {vue: true, title: "Deleting data", tags: ["delete"], code: ``},
+          {
+            vue: true,
+            title: "Click",
+            tags: ["@click"],
+            code: `
+              <template>
+                <div>
+                  <button @click="clicked">Button</button>
+                  <br>
+                  <h2>{{text}}</h2>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return {
+                    text: ""
+                  }
+                },
+                methods: {
+                  clicked() {
+                    this.text = "CLICKED"
+                  }
+                }
+              }
+              </script>
+            `
+          },
+        ]
+      },
+      {
+        topic: "Data structure",
+        list: [
+          {
+            title: "Learning API",
+            tags: [],
+            code: `
+              <h1>Learning API</h1>
+              <p>
+              I think the problem with learning API
+              is that you need to be exposed
+              to much more programming fundamentals.
+              </p>
+
+              <p class="t-mt-4">
+              Without knowledge of data structure like dictionary and list,
+              they won't really understand what is going on.
+              </p>
+
+              <p class="t-mt-4">
+
+              </p>
+            `
+          }
+        ]
+      },
+      {
+        topic: 'Library (API)',
+        list: [
+          {
+            vue: true,
+            title: "Updating data",
+            tags: ["put"],
+            code: `
+
+            `
+          },
+          {
+            vue: true,
+            title: "Getting data",
+            tags: ["get"],
+            code: `
+
+            `
+          },
+          {
+            vue: true,
+            title: "Deleting data",
+            tags: ["delete"],
+            code: `
+
+            `
+          },
+          {
+            vue: true,
+            title: "Put/Get/Delete Library Data",
+            tags: ["put", "get", "delete"],
+            code: `
+              <template>
+                <div>
+                  <div class="pad-bot">
+                    <input
+                    placeholder="Title"
+                    class="text-big"
+                    v-model="content.title"
+                    >
+                  </div>
+                  <div class="pad-bot">
+                    <textarea
+                    placeholder="Body"
+                    rows="8"
+                    v-model="content.text"
+                    ></textarea>
+                  </div>
+                  <div class="pad-bot">
+                    <button @click="getContent">Get</button>
+                    <button @click="updateContent">Update</button>
+                    <button @click="deleteContent">Delete</button>
+                  </div>
+                </div>
+              </template>
+
+              <script>
+              export default {
+                data() {
+                  return {
+                    content: {
+                      title: "",
+                      body: ""
+                    }
+                  }
+                },
+                methods: {
+                  getContent() {
+                    this.$axios
+                      .$get('https://api.heartcode.app/library/fuxing', {
+                        headers: {Authorization: "Bearer ..."}
+                      })
+                      .then((content) => {
+                        this.content = content.data[0].body
+                      })
+                  },
+                  updateContent() {
+                    this.$axios
+                      .$put(
+                        'https://api.heartcode.app/library/fuxing'
+                        , this.content
+                        , {headers: {Authorization: "Bearer ..."}})
+                  },
+                  deleteContent() {
+                    this.$axios
+                      .$delete('https://api.heartcode.app/library/fuxing', {
+                        headers: {Authorization: "Bearer ..."}
+                      })
+                  }
+                }
+              }
+              </script>
+
+              <style>
+              .pad-bot {
+                padding-bottom: 8px;
+              }
+
+              .text-big {
+                font-size: 20px;
+                font-weight: 600;
+              }
+              </style>
+            `
+          },
         ],
       },
       {

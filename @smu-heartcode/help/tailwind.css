@@ -83,7 +83,7 @@ button:hover {
   @apply border-gray-400;
 }
 
-input {
+input, textarea {
   @apply bg-gray-200;
   @apply py-2;
   @apply px-3;
