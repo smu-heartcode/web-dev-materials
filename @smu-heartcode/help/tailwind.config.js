@@ -3,7 +3,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  prefix: "t-",
+  prefix: "tw-",
   corePlugins: {
     preflight: true,
   },
