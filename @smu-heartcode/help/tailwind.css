@@ -67,7 +67,7 @@ hr:after {
   line-height: 1;
   font-size: 48px;
   letter-spacing: 8px;
-  color: #e53e3e;
+  @apply text-red-600;
 }
 
 button {
