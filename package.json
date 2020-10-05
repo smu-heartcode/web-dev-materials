@@ -20,10 +20,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
     "nuxt": "^2.14.0",
-    "@smu-heartcode/smu-heartcode-help": "^0.2.1"
+    "@smu-heartcode/smu-heartcode-help": "^0.3.0"
   },
   "devDependencies": {
-    "@smu-heartcode/smu-heartcode-deploy": "^0.2.0"
+    "@smu-heartcode/smu-heartcode-deploy": "^0.3.0"
   },
   "workspaces": [
     "@smu-heartcode/deploy",
