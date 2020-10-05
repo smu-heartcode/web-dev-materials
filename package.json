@@ -1,6 +1,6 @@
 {
   "name": "web-dev-materials",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -18,14 +18,16 @@
     "jsconfig.json"
   ],
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.0",
     "nuxt": "^2.14.0",
-    "@smu-heartcode/smu-heartcode-help": "^0.3.0"
+    "@nuxtjs/axios": "^5.12.0",
+    "@smu-heartcode/smu-heartcode-components": "^0.4.0",
+    "@smu-heartcode/smu-heartcode-help": "^0.4.0"
   },
   "devDependencies": {
-    "@smu-heartcode/smu-heartcode-deploy": "^0.3.0"
+    "@smu-heartcode/smu-heartcode-deploy": "^0.4.0"
   },
   "workspaces": [
+    "@smu-heartcode/components",
     "@smu-heartcode/deploy",
     "@smu-heartcode/help"
   ]
