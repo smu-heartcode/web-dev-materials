@@ -1,12 +1,11 @@
 <template>
-  <div>
+  <vue-masonry-wall>
 
-  </div>
+  </vue-masonry-wall>
 </template>
 
 <script>
 export default {
-  name: "heartcode-examples"
 }
 </script>
 

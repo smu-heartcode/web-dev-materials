@@ -21,6 +21,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@smu-heartcode/smu-heartcode-help',
+    '@smu-heartcode/smu-heartcode-components',
   ],
   axios: {},
 }
