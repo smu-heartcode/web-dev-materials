@@ -93,3 +93,12 @@ input, textarea {
   @apply border-gray-200;
   @apply w-full;
 }
+
+table {
+  @apply table-auto;
+}
+
+th, td {
+  @apply border;
+  @apply px-4 py-2;
+}
