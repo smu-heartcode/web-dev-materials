@@ -1,5 +1,6 @@
 export default {
   telemetry: false,
+  ssr: false,
   target: 'static',
   head: {
     title: 'HeartCode Web Dev',
