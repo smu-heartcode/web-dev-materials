@@ -6,6 +6,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'HeartcodeHeader',
+}
+</script>
+
 <style scoped>
 .header {
   background: #EEEEEE;

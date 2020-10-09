@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'HeartcodeImage',
   props: {
     src: String
   }

@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'HeartcodeContainer',
+}
+</script>
+
 <style scoped>
 .container {
   width: 100%;
