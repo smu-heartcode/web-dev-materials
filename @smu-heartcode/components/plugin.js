@@ -5,11 +5,13 @@ import VueMasonryWall from 'vue-masonry-wall'
 Vue.use(VueHorizontalList)
 Vue.use(VueMasonryWall)
 
-import HeartcodeBetween from '@smu-heartcode/smu-heartcode-components/heartcode-between'
-import HeartcodeContainer from '@smu-heartcode/smu-heartcode-components/heartcode-container'
-import HeartcodeHeader from '@smu-heartcode/smu-heartcode-components/heartcode-header'
-import HeartcodeImage from '@smu-heartcode/smu-heartcode-components/heartcode-image'
-import HeartcodeList from '@smu-heartcode/smu-heartcode-components/heartcode-list'
+import {
+  HeartcodeBetween,
+  HeartcodeContainer,
+  HeartcodeHeader,
+  HeartcodeImage,
+  HeartcodeList
+} from '@smu-heartcode/smu-heartcode-components-lib'
 
 Vue.component('heartcode-between', HeartcodeBetween)
 Vue.component('heartcode-header', HeartcodeHeader)

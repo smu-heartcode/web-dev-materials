@@ -28,6 +28,7 @@
   },
   "workspaces": [
     "@smu-heartcode/components",
+    "@smu-heartcode/components-lib",
     "@smu-heartcode/deploy",
     "@smu-heartcode/help"
   ]
