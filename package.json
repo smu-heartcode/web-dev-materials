@@ -24,7 +24,7 @@
     "@smu-heartcode/smu-heartcode-help": "^0.4.0"
   },
   "devDependencies": {
-    "@smu-heartcode/smu-heartcode-deploy": "^0.4.1"
+    "@smu-heartcode/smu-heartcode-deploy": "^0.4.2"
   },
   "workspaces": [
     "@smu-heartcode/components",
