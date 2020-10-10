@@ -45,7 +45,7 @@ function upload(username, password, done) {
       }
     })
     .catch(error => {
-      done(error)
+      done(null, error)
     });
 }
 
