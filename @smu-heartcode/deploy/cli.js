@@ -35,6 +35,8 @@ function upload(username, password, done) {
       'Authorization': `Bearer ${password}`,
       'Content-Type': 'application/zip'
     },
+    maxContentLength: Infinity,
+    maxBodyLength: Infinity,
     data: fs.createReadStream('.nuxt/dist.zip')
   }
 
@@ -45,7 +47,7 @@ function upload(username, password, done) {
       }
     })
     .catch(error => {
-      done(error)
+      done(null, error)
     });
 }
 
