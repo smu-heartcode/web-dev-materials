@@ -1,10 +1,9 @@
 {
   "name": "@smu-heartcode/smu-heartcode-components",
   "main": "index.js",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "license": "MIT",
   "dependencies": {
-    "@smu-heartcode/smu-heartcode-components-lib": "^0.4.4",
     "fs-extra": "^9.0.1",
     "vue-horizontal": "^0.3.0",
     "vue-horizontal-list": "^1.2.1",
