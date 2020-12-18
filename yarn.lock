@@ -10165,12 +10165,17 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
-vue-horizontal-list@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/vue-horizontal-list/-/vue-horizontal-list-1.0.12.tgz#98b41c3851f6b0070f553e764106108bea3c2868"
-  integrity sha512-D8p3VJNeCwPlxm+gSUTDh+hfoEeYx0uRTUmMeKaVSbAQTsrmY/IInAT1vB4GoUtzKyLUeNDDexwspIpWsfx3Jw==
+vue-horizontal-list@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vue-horizontal-list/-/vue-horizontal-list-1.2.1.tgz#c616734d6f85648627e1972d338723df26e366be"
+  integrity sha512-LbqGcgdSkHiw3paiYgrp4aLqkbPuuCvzVpQEi2vjaP2N6rWZlOMtrJuvwi+zyqEhu6ycHSAPKZOXmjfl3diOBg==
   dependencies:
     smoothscroll-polyfill "^0.4.4"
+
+vue-horizontal@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vue-horizontal/-/vue-horizontal-0.3.0.tgz#58464404d45b2b32fd176b2235e4e1ac757098f7"
+  integrity sha512-DGQf9yUvOh/ukvkcP+aTDgejTjTjM37mutrwm6H+OTdWR5NIYUALJgLsSRLK3mgmCIli9aS2GJPNMGT3LaQf3A==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
@@ -10197,10 +10202,10 @@ vue-loader@^15.9.2, vue-loader@^15.9.3:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-masonry-wall@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/vue-masonry-wall/-/vue-masonry-wall-0.2.5.tgz#200086afa4b015c6f5d9fd2a68aff651c89883ca"
-  integrity sha512-LoY0rWzO+sniM0/olUUxjM7GYQSClK0zV9svueCpsktg2pgnBjkyfrKA1XN+awuDlmdcGiXVF6YmN0nP6xrebg==
+vue-masonry-wall@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/vue-masonry-wall/-/vue-masonry-wall-0.3.1.tgz#9aefe2ed4599f2b925272999b8a95c6d294ff270"
+  integrity sha512-lba8LO2lSRVFmgL/L8z6UC5dIZUAGtFeb5As1/VbYTjvf9G5sEQ4qrrvvoh2AA4beMqgvW9ApJBEXsc9eYPoVg==
   dependencies:
     vue-observe-visibility "^0.4.6"
 
