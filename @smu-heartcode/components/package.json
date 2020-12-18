@@ -1,7 +1,7 @@
 {
   "name": "@smu-heartcode/smu-heartcode-components",
   "main": "index.js",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "license": "MIT",
   "dependencies": {
     "@smu-heartcode/smu-heartcode-components-lib": "^0.4.4",
